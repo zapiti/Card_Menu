@@ -16,6 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        window = UIWindow()
+        window?.makeKeyAndVisible()
+//
+//
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 8
+        let cardCollection = CardViewController(collectionViewLayout: layout)
+        
+        
+        
+//        window?.rootViewController = UINavigationController(rootViewController: ViewController(nibName: nil, bundle: nil))
+//        window?.makeKeyAndVisible()
+     window?.rootViewController = cardCollection
         return true
     }
 
